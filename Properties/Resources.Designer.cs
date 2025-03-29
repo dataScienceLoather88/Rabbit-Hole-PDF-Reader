@@ -63,39 +63,9 @@ namespace EbookReaderTest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap headRight {
+        internal static System.Drawing.Bitmap rabbitHoleTest3 {
             get {
-                object obj = ResourceManager.GetObject("headRight", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap rabbitHoleTest {
-            get {
-                object obj = ResourceManager.GetObject("rabbitHoleTest", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap rabbitHoleTest2 {
-            get {
-                object obj = ResourceManager.GetObject("rabbitHoleTest2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap rabbitHoleTest21 {
-            get {
-                object obj = ResourceManager.GetObject("rabbitHoleTest21", resourceCulture);
+                object obj = ResourceManager.GetObject("rabbitHoleTest3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
