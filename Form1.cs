@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing.Imaging;
 using System.Reflection.Metadata.Ecma335;
 using System.Windows.Forms;
@@ -12,6 +12,7 @@ using System.IO;
 
 using iText.Bouncycastle;
 using iText.Bouncycastleconnector;
+using Newtonsoft.Json;
 
 namespace EbookReaderTest
 {
@@ -22,13 +23,34 @@ namespace EbookReaderTest
         private bool isDarkMode = false;
         private bool isBookmarkVisable = false;
         private string currentPdfPath;
+        private Dictionary<string, int> pageMemory = new Dictionary<string, int>();
+        private string pageMemoryPath = Path.Combine(Application.StartupPath, "pageMemory.json");
 
-        public Form1()
+
+
+        public Form1(int skipSelectionDialogue = 0)
         {
             InitializeComponent(); // Keep this line
+
+            if (File.Exists(pageMemoryPath))
+            {
+                try
+                {   
+                    string json = File.ReadAllText(pageMemoryPath);
+                    pageMemory = JsonConvert.DeserializeObject<Dictionary<string, int>>(json)
+                                ?? new Dictionary<string, int>();
+                }
+                catch
+                {
+                    pageMemory = new Dictionary<string, int>(); // fallback on corruption
+                }
+            }
+
+
             this.Text = "Rabbit Hole";
             checkForPdfDirectory(); //ensurePdfDirectoryExists()
-            showPdfSelectionDialogue();
+            if(skipSelectionDialogue == 0)
+                showPdfSelectionDialogue();
         }
 
         private void checkForPdfDirectory()
@@ -58,8 +80,11 @@ namespace EbookReaderTest
 
         }
 
-        private void LoadPDF(string filePath, int page = 0)
+        public void LoadPDF(string filePath, int page = 0)
         {
+
+            currentPdfPath = filePath;
+
             if (pdfViewer == null)
             {
                 pdfViewer = new PdfViewer();
@@ -71,6 +96,17 @@ namespace EbookReaderTest
             try
             {
                 pdfViewer.Document = PdfiumViewer.PdfDocument.Load(filePath);
+
+                // 🔁 Restore last viewed page
+                if (pageMemory.ContainsKey(currentPdfPath))
+                {
+                    int lastPage = pageMemory[currentPdfPath];
+                    if (lastPage >= 0 && lastPage < pdfViewer.Document.PageCount)
+                    {
+                        pdfViewer.Renderer.Page = lastPage;
+                        page = -1;
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -78,16 +114,68 @@ namespace EbookReaderTest
                 return;
             }
 
-            currentPdfPath = filePath;
-
-            pdfViewer.Renderer.Page = page;
+            if (page != -1)
+                pdfViewer.Renderer.Page = page;
 
             UpdatePageLabel();
             pdfViewer.ShowBookmarks = false;
             panel1.Left = this.Width - panel1.Width - 60;
             this.WindowState = FormWindowState.Maximized;
+            UpdateRecentsList(currentPdfPath);
             //pdfViewer.Renderer.Page = pdfViewer.Renderer.Page + 1;
         }
+
+        private void UpdateRecentsList(string filePath)
+        {
+            string recentsPath = Path.Combine(Application.StartupPath, "recent.json");
+            List<string> recentFiles = new List<string>();
+
+            if (File.Exists(recentsPath))
+            {
+                try
+                {
+                    recentFiles = JsonConvert.DeserializeObject<List<string>>(File.ReadAllText(recentsPath)) ?? new List<string>();
+                }
+                catch
+                {
+                    recentFiles = new List<string>();
+                }
+            }
+
+            // Move file to top if already exists
+            if (recentFiles.Contains(filePath))
+                recentFiles.Remove(filePath);
+
+            recentFiles.Insert(0, filePath);
+
+            // Limit to 5 items
+            if (recentFiles.Count > 5)
+                recentFiles = recentFiles.Take(5).ToList();
+
+            File.WriteAllText(recentsPath, JsonConvert.SerializeObject(recentFiles, Formatting.Indented));
+        }
+
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (pdfViewer?.Renderer != null && !string.IsNullOrEmpty(currentPdfPath))
+            {
+                int currentPage = pdfViewer.Renderer.Page;
+
+                pageMemory[currentPdfPath] = currentPage;
+
+                try
+                {
+                    string json = JsonConvert.SerializeObject(pageMemory, Formatting.Indented);
+                    File.WriteAllText(pageMemoryPath, json);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Failed to save page memory: " + ex.Message);
+                }
+            }
+        }
+
 
         private void AddBookmarkToPdf(string bookmarkTitle, int pageIndex, string inputPath)
         {
@@ -147,7 +235,7 @@ namespace EbookReaderTest
             isBookmarkVisable = !isBookmarkVisable;
             if (isBookmarkVisable)
                 pdfViewer.ShowBookmarks = true;
-            else 
+            else
                 pdfViewer.ShowBookmarks = false;
             if (pdfViewer.Document.Bookmarks == null)
                 pdfViewer.ShowBookmarks = false;
@@ -279,7 +367,7 @@ namespace EbookReaderTest
                 pictureBoxInverted.Image = inverted;
                 pictureBoxInverted.Height = height;
                 pictureBoxInverted.Width = width;
-                pictureBoxInverted.Left = width / 2 + width / 4; 
+                pictureBoxInverted.Left = width / 2 + width / 4;
             }
         }
 
@@ -349,6 +437,11 @@ namespace EbookReaderTest
             {
                 MessageBox.Show("No more matches found.");
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

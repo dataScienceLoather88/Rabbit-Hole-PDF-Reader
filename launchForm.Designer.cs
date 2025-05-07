@@ -30,13 +30,14 @@
         {
             JUMP = new Button();
             pictureBox1 = new PictureBox();
+            comboRecents = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // JUMP
             // 
             JUMP.Anchor = AnchorStyles.None;
-            JUMP.Location = new Point(338, 403);
+            JUMP.Location = new Point(338, 408);
             JUMP.Name = "JUMP";
             JUMP.Size = new Size(125, 35);
             JUMP.TabIndex = 0;
@@ -53,15 +54,26 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
+            // comboRecents
+            // 
+            comboRecents.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboRecents.FormattingEnabled = true;
+            comboRecents.Location = new Point(338, 456);
+            comboRecents.Name = "comboRecents";
+            comboRecents.Size = new Size(125, 33);
+            comboRecents.TabIndex = 2;
+            comboRecents.SelectedIndexChanged += comboRecents_SelectedIndexChanged;
+            // 
             // launchForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 501);
+            Controls.Add(comboRecents);
             Controls.Add(pictureBox1);
             Controls.Add(JUMP);
             Name = "launchForm";
-            Text = "launchForm";
+            Text = "Launch Form";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -70,5 +82,6 @@
 
         private Button JUMP;
         private PictureBox pictureBox1;
+        private ComboBox comboRecents;
     }
 }

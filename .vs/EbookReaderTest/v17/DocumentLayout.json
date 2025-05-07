@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{BFEC5BBD-BB0C-4425-8031-01CB05926F66}|EbookReaderTest.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFEC5BBD-BB0C-4425-8031-01CB05926F66}|EbookReaderTest.csproj|c:\\users\\shaheer\\documents\\visual studio 2022\\projects\\ebookreadertest\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BFEC5BBD-BB0C-4425-8031-01CB05926F66}|EbookReaderTest.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFEC5BBD-BB0C-4425-8031-01CB05926F66}|EbookReaderTest.csproj|c:\\users\\shaheer\\documents\\visual studio 2022\\projects\\ebookreadertest\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFEC5BBD-BB0C-4425-8031-01CB05926F66}|EbookReaderTest.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BFEC5BBD-BB0C-4425-8031-01CB05926F66}|EbookReaderTest.csproj|c:\\users\\shaheer\\documents\\visual studio 2022\\projects\\ebookreadertest\\launchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFEC5BBD-BB0C-4425-8031-01CB05926F66}|EbookReaderTest.csproj|solutionrelative:launchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BFEC5BBD-BB0C-4425-8031-01CB05926F66}|EbookReaderTest.csproj|C:\\Users\\Shaheer\\Documents\\Visual Studio 2022\\Projects\\EbookReaderTest\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BFEC5BBD-BB0C-4425-8031-01CB05926F66}|EbookReaderTest.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BFEC5BBD-BB0C-4425-8031-01CB05926F66}|EbookReaderTest.csproj|C:\\Users\\Shaheer\\Documents\\Visual Studio 2022\\Projects\\EbookReaderTest\\launchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BFEC5BBD-BB0C-4425-8031-01CB05926F66}|EbookReaderTest.csproj|solutionrelative:launchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFEC5BBD-BB0C-4425-8031-01CB05926F66}|EbookReaderTest.csproj|c:\\users\\shaheer\\documents\\visual studio 2022\\projects\\ebookreadertest\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFEC5BBD-BB0C-4425-8031-01CB05926F66}|EbookReaderTest.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BFEC5BBD-BB0C-4425-8031-01CB05926F66}|EbookReaderTest.csproj|c:\\users\\shaheer\\documents\\visual studio 2022\\projects\\ebookreadertest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,13 +42,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "launchForm.cs",
               "DocumentMoniker": "C:\\Users\\Shaheer\\Documents\\Visual Studio 2022\\Projects\\EbookReaderTest\\launchForm.cs",
               "RelativeDocumentMoniker": "launchForm.cs",
               "ToolTip": "C:\\Users\\Shaheer\\Documents\\Visual Studio 2022\\Projects\\EbookReaderTest\\launchForm.cs",
               "RelativeToolTip": "launchForm.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAgwDkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T16:23:51.317Z",
               "IsPinned": true,
@@ -62,7 +62,7 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\Shaheer\\Documents\\Visual Studio 2022\\Projects\\EbookReaderTest\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAwAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAwCUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T07:46:16.189Z",
               "IsPinned": true,
@@ -74,16 +74,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Shaheer\\Documents\\Visual Studio 2022\\Projects\\EbookReaderTest\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
               "ToolTip": "C:\\Users\\Shaheer\\Documents\\Visual Studio 2022\\Projects\\EbookReaderTest\\Form1.Designer.cs",
               "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T12:12:11.31Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T12:12:11.31Z"
             },
             {
               "$type": "Document",
@@ -95,32 +94,29 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T07:29:55.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T07:29:55.246Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Shaheer\\Documents\\Visual Studio 2022\\Projects\\EbookReaderTest\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\Shaheer\\Documents\\Visual Studio 2022\\Projects\\EbookReaderTest\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T07:29:17.914Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-16T07:29:17.914Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "launchForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Shaheer\\Documents\\Visual Studio 2022\\Projects\\EbookReaderTest\\launchForm.cs",
               "RelativeDocumentMoniker": "launchForm.cs",
               "ToolTip": "C:\\Users\\Shaheer\\Documents\\Visual Studio 2022\\Projects\\EbookReaderTest\\launchForm.cs [Design]",
               "RelativeToolTip": "launchForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T16:22:50.949Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-17T16:22:50.949Z"
             },
             {
               "$type": "Document",
@@ -130,10 +126,9 @@
               "RelativeDocumentMoniker": "launchForm.Designer.cs",
               "ToolTip": "C:\\Users\\Shaheer\\Documents\\Visual Studio 2022\\Projects\\EbookReaderTest\\launchForm.Designer.cs",
               "RelativeToolTip": "launchForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T16:23:23.433Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T16:23:23.433Z"
             }
           ]
         }
